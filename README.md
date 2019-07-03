@@ -16,7 +16,7 @@ VerneMQ is an Apache2 licensed distributed MQTT broker, developed in Erlang.
 
 First install and configure Helm according to the [documentation](https://helm.sh/docs/using_helm/#quickstart-guide). Then add VerneMQ Helm charts repository:
 
-    helm repo add vernemq https://vernemq.github.io/docker-vernemq
+    helm repo add vernemq https://miguelciego.github.io/docker-vernemq
 
 You can now deploy VerneMQ on your Kubernetes cluster:
 
