@@ -61,6 +61,14 @@ spec:
       nodePort: {{ .Values.service.ws.nodePort }}
       {{- end }}
     {{- end }}
+    {{- if .Values.service.prometheus.enabled }}
+    - port: {{ .Values.service.prometheus.port }}
+      targetPort: prometheus
+      name: prometheus
+      {{- if eq .Values.service.type "NodePort" }}
+      nodePort: {{ .Values.service.prometheus.nodePort }}
+      {{- end }}
+    {{- end }}
   selector:
     app.kubernetes.io/name: {{ include "vernemq.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
